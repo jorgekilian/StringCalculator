@@ -1,0 +1,14 @@
+
+StringCalculatorSpecs/.vs/StringCalculatorSpecs/v16/
+
+StringCalculatorSpecs/StringCalculatorSpecs.sln.DotSettings.user
+
+*.dll
+
+*.pdb
+
+StringCalculatorSpecs/StringCalculatorSpecs/bin/Debug/netcoreapp3.1/
+
+StringCalculatorSpecs/StringCalculatorSpecs/obj/Debug/netcoreapp3.1/
+
+StringCalculatorSpecs/StringCalculatorSpecs/obj/
