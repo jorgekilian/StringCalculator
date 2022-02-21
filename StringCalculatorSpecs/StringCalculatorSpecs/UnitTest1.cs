@@ -59,5 +59,12 @@ namespace StringCalculatorSpecs {
 
             Assert.AreEqual(7, result);
         }
+
+        [Test]
+        public void return_sum_when_string_is_four_any_numbers_separated_only_by_carriage_return() {
+            var result = StringCalculator.Add("2\n2");
+
+            Assert.AreEqual(4, result);
+        }
     }
 }
