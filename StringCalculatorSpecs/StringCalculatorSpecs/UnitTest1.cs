@@ -25,5 +25,12 @@ namespace StringCalculatorSpecs {
             Assert.AreEqual(expected, result);
         }
 
+        [Test]
+        public void return_sum_when_string_is_two_numbers() {
+            var result = StringCalculator.Add("1,2");
+
+            Assert.AreEqual(3, result);
+        }
+
     }
 }
