@@ -45,5 +45,12 @@ namespace StringCalculatorSpecs {
 
             Assert.AreEqual(5, result);
         }
+
+        [Test]
+        public void return_sum_when_string_is_four_any_numbers() {
+            var result = StringCalculator.Add("2,2,1,2");
+
+            Assert.AreEqual(7, result);
+        }
     }
 }
