@@ -15,10 +15,4 @@ namespace StringCalculatorSpecs {
             Assert.AreEqual(result, 0);
         }
     }
-
-    public abstract class StringCalculator {
-        public static int Add(string numbers) {
-            return 0;
-        }
-    }
 }
