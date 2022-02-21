@@ -38,5 +38,12 @@ namespace StringCalculatorSpecs {
 
             Assert.AreEqual(4, result);
         }
+
+        [Test]
+        public void return_sum_when_string_is_three_any_numbers() {
+            var result = StringCalculator.Add("2,2,1");
+
+            Assert.AreEqual(5, result);
+        }
     }
 }
