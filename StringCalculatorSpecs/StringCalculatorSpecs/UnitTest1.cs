@@ -18,7 +18,7 @@ namespace StringCalculatorSpecs {
 
     public abstract class StringCalculator {
         public static int Add(string numbers) {
-            throw new System.NotImplementedException();
+            return 0;
         }
     }
 }
