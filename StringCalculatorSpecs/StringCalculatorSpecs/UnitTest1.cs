@@ -15,31 +15,15 @@ namespace StringCalculatorSpecs {
             Assert.AreEqual(0, result);
         }
 
-        [Test]
-        public void return_1_when_string_is_1() {
-            int result;
+        [TestCase("1",1)]
+        [TestCase("2", 2)]
+        [TestCase("3", 3)]
+        [TestCase("4", 4)]
+        public void return_int_when_string_is_one_number(string number, int result) {
+            var expected = StringCalculator.Add(number);
 
-            result = StringCalculator.Add("1");
-
-            Assert.AreEqual(1, result);
+            Assert.AreEqual(expected, result);
         }
 
-        [Test]
-        public void return_2_when_string_is_2() {
-            int result;
-
-            result = StringCalculator.Add("2");
-
-            Assert.AreEqual( 2, result);
-        }
-
-        [Test]
-        public void return_3_when_string_is_3() {
-            int result;
-
-            result = StringCalculator.Add("3");
-
-            Assert.AreEqual(3, result);
-        }
     }
 }
