@@ -32,5 +32,11 @@ namespace StringCalculatorSpecs {
             Assert.AreEqual(3, result);
         }
 
+        [Test]
+        public void return_sum_when_string_is_two_any_numbers() {
+            var result = StringCalculator.Add("2,2");
+
+            Assert.AreEqual(4, result);
+        }
     }
 }
