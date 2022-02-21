@@ -12,7 +12,7 @@ namespace StringCalculatorSpecs {
 
             result = StringCalculator.Add("");
 
-            Assert.AreEqual(result, 0);
+            Assert.AreEqual(0, result);
         }
 
         [Test]
@@ -21,7 +21,7 @@ namespace StringCalculatorSpecs {
 
             result = StringCalculator.Add("1");
 
-            Assert.AreEqual(result, 1);
+            Assert.AreEqual(1, result);
         }
 
         [Test]
@@ -30,7 +30,7 @@ namespace StringCalculatorSpecs {
 
             result = StringCalculator.Add("2");
 
-            Assert.AreEqual(result, 2);
+            Assert.AreEqual( 2, result);
         }
     }
 }
