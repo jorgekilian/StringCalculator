@@ -14,5 +14,14 @@ namespace StringCalculatorSpecs {
 
             Assert.AreEqual(result, 0);
         }
+
+        [Test]
+        public void return_1_when_string_is_1() {
+            int result;
+
+            result = StringCalculator.Add("1");
+
+            Assert.AreEqual(result, 1);
+        }
     }
 }
