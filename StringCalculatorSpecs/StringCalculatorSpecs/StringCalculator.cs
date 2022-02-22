@@ -14,9 +14,7 @@ namespace StringCalculatorSpecs {
             if (numbers.Contains("\n")) separator = "\n";
             numbers = numbers.Replace(separator, ",");
             var intNumbers = numbers.Split(",").Select(int.Parse);
-            foreach (var number in intNumbers) {
-                if (number < 0) throw new Exception();
-            }
+            if (intNumbers.Any(i => i < 0)) throw new Exception();
             return intNumbers.Sum();
         }
     }
