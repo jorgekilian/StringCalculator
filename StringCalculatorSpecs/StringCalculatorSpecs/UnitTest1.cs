@@ -73,5 +73,12 @@ namespace StringCalculatorSpecs {
 
             Assert.AreEqual(3, result);
         }
+
+        [Test]
+        public void return_sum_when_string_is_separated_by_a_specific_separator_defined_at_the_begining() {
+            var result = StringCalculator.Add("//*\n2*2");
+
+            Assert.AreEqual(4, result);
+        }
     }
 }
