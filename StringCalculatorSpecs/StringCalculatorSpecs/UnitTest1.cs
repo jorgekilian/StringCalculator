@@ -91,7 +91,7 @@ namespace StringCalculatorSpecs {
         public void throw_exception_witha_specific_message_when_number_is_negative() {
             var ex = Assert.Throws<Exception>(() => StringCalculator.Add("1,-2"));
 
-            Assert.That(ex.Message, Is.EqualTo("Negatives not allowed"));
+            Assert.That(ex.Message, Is.EqualTo("Negatives not allowed (-2)"));
         }
 
     }
