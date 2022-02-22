@@ -66,5 +66,12 @@ namespace StringCalculatorSpecs {
 
             Assert.AreEqual(4, result);
         }
+
+        [Test]
+        public void return_sum_when_string_is_separated_by_a_semicolon_separator_defined_at_the_begining() {
+            var result = StringCalculator.Add("//;\n1;2");
+
+            Assert.AreEqual(3, result);
+        }
     }
 }
