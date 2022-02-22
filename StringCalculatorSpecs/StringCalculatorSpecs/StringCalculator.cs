@@ -7,7 +7,7 @@ namespace StringCalculatorSpecs {
             if (numbers == string.Empty) return 0;
             if (!numbers.Contains(",") && !numbers.Contains("\n")) return int.Parse(numbers);
             if (numbers.Contains("//")) {
-                separator = ";";
+                separator = numbers.Substring(2, 1);
                 numbers = numbers.Substring(4);
             }
             if (numbers.Contains("\n")) separator = "\n";
