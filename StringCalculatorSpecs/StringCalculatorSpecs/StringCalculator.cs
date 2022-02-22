@@ -13,7 +13,7 @@ namespace StringCalculatorSpecs {
             }
             if (numbers.Contains("\n")) separator = "\n";
             numbers = numbers.Replace(separator, ",");
-            var intNumbers = numbers.Split(",").Select(int.Parse);
+            var intNumbers = numbers.Split(",").Select(int.Parse).Where(x => x <= 1000);
             var negativeNumbers = intNumbers.Where(i => i < 0).Select(x => Convert.ToString(x)); ;
             if (negativeNumbers.Any()) throw new Exception($"Negatives not allowed ({string.Join(",", negativeNumbers) })");
             return intNumbers.Sum();
