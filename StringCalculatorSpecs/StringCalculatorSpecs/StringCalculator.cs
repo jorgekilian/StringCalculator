@@ -14,7 +14,7 @@ namespace StringCalculatorSpecs {
             if (numbers.Contains("\n")) separator = "\n";
             numbers = numbers.Replace(separator, ",");
             var intNumbers = numbers.Split(",").Select(int.Parse);
-            if (intNumbers.Any(i => i < 0)) throw new Exception();
+            if (intNumbers.Any(i => i < 0)) throw new Exception("Negatives not allowed");
             return intNumbers.Sum();
         }
     }
