@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 namespace StringCalculatorSpecs {
@@ -12,7 +13,11 @@ namespace StringCalculatorSpecs {
             }
             if (numbers.Contains("\n")) separator = "\n";
             numbers = numbers.Replace(separator, ",");
-            return numbers.Split(",").Sum(int.Parse);
+            var intNumbers = numbers.Split(",").Select(int.Parse);
+            foreach (var number in intNumbers) {
+                if (number < 0) throw new Exception();
+            }
+            return intNumbers.Sum();
         }
     }
 }
