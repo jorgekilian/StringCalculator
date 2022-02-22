@@ -102,6 +102,13 @@ namespace StringCalculatorSpecs {
         }
 
         [Test]
+        public void return_sum_when_string_is_separated_by_a_specific_separator_defined_with_any_length() {
+            var result = StringCalculator.Add("//[***]\n1***2***3");
+
+            Assert.AreEqual(6, result);
+        }
+
+        [Test]
         public void avoid_number_greater_than_1000() {
             var result = StringCalculator.Add("2,1001");
 
