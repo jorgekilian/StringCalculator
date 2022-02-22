@@ -115,5 +115,11 @@ namespace StringCalculatorSpecs {
             Assert.AreEqual(6, result);
         }
 
+        [Test]
+        public void return_sum_when_string_is_separated_by_a_multiple_separators() {
+            var result = StringCalculator.Add("//[*][%]\n1*2%3");
+
+            Assert.AreEqual(6, result);
+        }
     }
 }
