@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace StringCalculatorSpecs {
@@ -79,6 +80,11 @@ namespace StringCalculatorSpecs {
             var result = StringCalculator.Add("//*\n2*2");
 
             Assert.AreEqual(4, result);
+        }
+
+        [Test]
+        public void throw_exception_when_number_is_negative() {
+            Assert.Throws<Exception>(() => StringCalculator.Add("1,-2"));
         }
     }
 }
