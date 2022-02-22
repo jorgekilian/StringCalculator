@@ -100,5 +100,12 @@ namespace StringCalculatorSpecs {
 
             Assert.That(ex.Message, Is.EqualTo("Negatives not allowed (-2,-4)"));
         }
+
+        [Test]
+        public void avoid_number_greater_than_1000() {
+            var result = StringCalculator.Add("2,1001");
+
+            Assert.AreEqual(2, result);
+        }
     }
 }
